@@ -76,21 +76,7 @@ class FirstPage extends StatelessWidget{
 
 
       body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Página com as 5 questões"),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaResultado()),
-                );
-              },
-              child: Text('Ir para o resultado'),
-            ),
-          ],
-        ), 
+        child: Text("Página com as questões")
       ),
 
       bottomNavigationBar: BottomNavigationBar(
@@ -131,7 +117,7 @@ class _TelaResultadoState extends State<TelaResultado> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text("Você conseguiu chegar nessa página"),
+        child: Text("Página de resutado"),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
@@ -145,10 +131,6 @@ class _TelaResultadoState extends State<TelaResultado> {
             label: 'Home'
 
             ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.arrow_forward),
-            label: 'Próxima'
-            )
         ]
       ),
     );
