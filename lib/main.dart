@@ -39,7 +39,7 @@ class inicio extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const FirstPage()));
               }, 
               
-            child: Text("Iniciar teste"))
+            child: const Text("Iniciar teste"))
           ],
         ),
     ),
@@ -84,7 +84,18 @@ class FirstPage extends StatelessWidget{
 
 
       body: const Center(
-        child: Text("Página com as questões")
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Questão 1"),
+            Text("Questão 2"),
+            Text("Questão 3"),
+            Text("Questão 4"),
+            Text("Questão 5"),
+          ],
+          
+        )
+        
       ),
 
       bottomNavigationBar: BottomNavigationBar(
