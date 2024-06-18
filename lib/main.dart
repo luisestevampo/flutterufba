@@ -27,7 +27,7 @@ class inicio extends StatelessWidget {
       appBar: AppBar(
         title: const Text ("App Gabaritando"),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blue,
       ),
 
       body: Center(
@@ -71,7 +71,7 @@ class FirstPage extends StatelessWidget{
       appBar: AppBar(
         title: const Text ("App Gabaritando"),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blue,
       ),
 
 
@@ -96,6 +96,16 @@ class FirstPage extends StatelessWidget{
             label: 'Próxima'
             )
       ],
+      currentIndex: 0,
+      onTap: (index) {
+        if (index == 2) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => TelaResultado()),
+          );
+        }
+        
+      },
       ),
     );
   }
@@ -113,7 +123,7 @@ class _TelaResultadoState extends State<TelaResultado> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Página de Resultado"),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green,
         centerTitle: true,
       ),
       body: Center(
