@@ -40,7 +40,6 @@ class inicio extends StatelessWidget {
               }, 
               
             child: Text("Iniciar teste"))
-          
           ],
         ),
     ),
@@ -56,7 +55,16 @@ class inicio extends StatelessWidget {
             icon: Icon(Icons.arrow_forward),
             label: 'Próxima'
             )
-        ]
+        ],
+         currentIndex: 0,
+      onTap: (index) {
+        if (index == 1) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const FirstPage()),
+          ); 
+        } 
+        },
     ),
     );
   }
@@ -102,6 +110,16 @@ class FirstPage extends StatelessWidget{
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => TelaResultado()),
+          ); 
+        } else if (index == 0 ) {
+            Navigator.pop(
+            context,
+            MaterialPageRoute(builder: (context) => const inicio()),
+            );
+        } else {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(builder: (context) => const inicio())
           );
         }
         
@@ -122,11 +140,11 @@ class _TelaResultadoState extends State<TelaResultado> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Página de Resultado"),
+        title: const Text("Página de Resultado"),
         backgroundColor: Colors.green,
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text("Página de resutado"),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -141,7 +159,21 @@ class _TelaResultadoState extends State<TelaResultado> {
             label: 'Home'
 
             ),
-        ]
+        ],
+        currentIndex: 0,
+      onTap: (index) {
+        if (index == 0) {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(builder: (context) => const FirstPage()),
+          ); 
+        } else if (index == 1 ) {
+            Navigator.pop(
+            context,
+            MaterialPageRoute(builder: (context) => const inicio()),
+            );
+        }
+      },
       ),
     );
   }
