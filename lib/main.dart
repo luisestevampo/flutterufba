@@ -86,11 +86,11 @@ class FirstPage extends StatefulWidget{
 
 class _FirstPageState extends State<FirstPage> {
   List<Question> questions =[
-    Question('Descreva aqui a primeira pergunta:', ['a) Alternativa A', 'b) Alternativa B', 'c) Alternativa C'], null, 0),
-    Question('Descreva aqui a primeira pergunta:', ['a) Alternativa A', 'b) Alternativa B', 'c) Alternativa C'], null, 0),
-    Question('Descreva aqui a primeira pergunta:', ['a) Alternativa A', 'b) Alternativa B', 'c) Alternativa C'], null, 0),
-    Question('Descreva aqui a primeira pergunta:', ['a) Alternativa A', 'b) Alternativa B', 'c) Alternativa C'], null, 0),
-    Question('Descreva aqui a primeira pergunta:', ['a) Alternativa A', 'b) Alternativa B', 'c) Alternativa C'], null,0),
+    Question('O que é Flutter?:', ['a) Flutter é um framework de código aberto desenvolvido pelo Google para criar interfaces de usuário nativas de alta qualidade em plataformas móveis (iOS e Android) e web a partir de uma única base de código.', 'b) Flutter utiliza a linguagem java e Dotnet para escrever aplicativos, não ferecendo um ambiente de desenvolvimento rápido e eficiente.', 'c) É conhecido por sua performance lenta e por proporcionar uma experiência visual pouco atrativa através de seus widgets.'], null, 0),
+    Question('Quais são as vantagens de usar Flutter?:', ['a)Desenvolvimento rápido de aplicativos para múltiplas plataformas a partir de um único código-fonte.', 'b) Widgets personalizáveis e de baixo desempenho que oferecem uma experiência para poucos programadores.', 'c) Pouca comunidade de desenvolvedores e sem suporte do Google.'], null, 0),
+    Question('Quais são os principais componentes do Flutter?:', ['a) Widgets: São os blocos de construção básicos da interface do usuário no Flutter, que juntos formam a estrutura visual dos aplicativos.', 'b) java basico e c#: São as diretrizes de design do Flutter para criar aplicativos.', 'c) Clipper: A linguagem de programação utilizada pelo Flutter, conhecida por sua sintaxe Complexa para aplicativos móveis.'], null, 0),
+    Question('Como o Flutter se compara a outras tecnologias de desenvolvimento móvel?:', ['a) Ao contrário de abordagens baseadas em WebView, como o Cordova, Flutter produz aplicativos nativos que não dependem de navegadores para renderização.', 'b)  Em comparação com frameworks como React Native, Flutter geralmente oferece menos performance e pouca experiência de usuário mais consistente. .', 'c) A curva de aprendizado pode ser mais complexo devido a uma linguagem sem suporte .'], null, 0),
+    Question('Quais são os casos de uso ideais para Flutter?:', ['a) Desenvolvimento de aplicativos que precisam ser lançados rapidamente em várias plataformas sem comprometer a performance.', 'b)Projetos que exigem interfaces pouco personalizáveis e visualmente .', 'c) Aplicativos que necessitam de suporte contínuo e atualizações demoradas e recursos pouco eficiente.'], null,0),
   ];
 
   void calculateAndNavigate() {
