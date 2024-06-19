@@ -68,9 +68,22 @@ class inicio extends StatelessWidget {
   }
 }
 
-class FirstPage extends StatelessWidget{
+class Questoes {
+  String text;
+  List<String> opcoes;
+  int?OpcaoSelecionada;
+
+  Questoes(this.text, this.opcoes, this.OpcaoSelecionada);
+}
+
+class FirstPage extends StatefulWidget{
   const FirstPage ({super.key});
 
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -189,3 +202,18 @@ class _TelaResultadoState extends State<TelaResultado> {
     );
   }
 }
+
+class Applogic {
+  /* 
+    criar 5 questões com botão radio (Leonardo)
+    setar que a alternativa correta é sempre a letra A
+
+
+    Cada acerto conta pontuação ++
+    if numero de acertos for =>3 exibe tela verde com a mennsagem de aprovado  e pontuação
+    else exibe tela ver melha com a mensagem de reprovado ee pontuação
+  
+  
+   */
+}
+
