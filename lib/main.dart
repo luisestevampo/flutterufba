@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -120,7 +118,7 @@ class FirstPage extends StatelessWidget{
         if (index == 2) {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => TelaResultado()),
+            MaterialPageRoute(builder: (context) => const TelaResultado()),
           ); 
         } else if (index == 0 ) {
             Navigator.pop(
@@ -142,6 +140,8 @@ class FirstPage extends StatelessWidget{
 
 
 class TelaResultado extends StatefulWidget {
+  const TelaResultado({super.key});
+
   @override
   _TelaResultadoState createState() => _TelaResultadoState();
 }
