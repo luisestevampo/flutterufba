@@ -85,7 +85,6 @@ class FirstPage extends StatefulWidget{
 }
 
 class _FirstPageState extends State<FirstPage> {
-
   List<Question> questions =[
     Question('Descreva aqui a primeira pergunta:', ['a) Alternativa A', 'b) Alternativa B', 'c) Alternativa C'], null, 0),
     Question('Descreva aqui a primeira pergunta:', ['a) Alternativa A', 'b) Alternativa B', 'c) Alternativa C'], null, 0),
@@ -116,7 +115,6 @@ class _FirstPageState extends State<FirstPage> {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,7 +123,6 @@ class _FirstPageState extends State<FirstPage> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-
 
       body: Center(
         child: ListView.builder(
@@ -163,19 +160,45 @@ class _FirstPageState extends State<FirstPage> {
           },
         ),
       ),
-       bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: ElevatedButton(
-            onPressed: calculateAndNavigate,
-            child: Text('Enviar Respostas'),
-          ),
-        ),
-      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_back),
+            label: 'Voltar'
+            ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home'
+            ),
+
+            BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_forward),
+            label: 'Próxima'
+            )
+        ],
+         currentIndex: 0,
+          onTap: (index) {
+          if (index == 0) {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(builder: (context) => const inicio()),
+          ); 
+        } else if(index==1) {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(builder: (context) => const inicio()),
+          );
+        } else {
+           calculateAndNavigate();
+          }
+        },
+    ),
     );
   }
 }
-
 
 class TelaResultado extends StatelessWidget {
   const TelaResultado({super.key, required this.grade, required this.isApproved});
@@ -198,7 +221,34 @@ class TelaResultado extends StatelessWidget {
           textAlign: TextAlign.center,
       ),
       ),
-      
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_back),
+            label: 'Voltar'
+            ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home'
+            )
+        ],
+         currentIndex: 0,
+          onTap: (index) {
+          if (index == 0) {
+          Navigator.pop(
+            context,  
+            MaterialPageRoute(builder: (context) => const FirstPage()),
+          ); 
+        } else if (index == 1) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const inicio()),
+          );
+        }
+        },
+    ),
     );
   }
 }
