@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp( 
+    return const MaterialApp(
       title: ("App Gabaritando"),
-      home: inicio(),
+      home: const inicio(),
       );
   }
 }
@@ -20,7 +20,7 @@ class inicio extends StatelessWidget {
   const inicio({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
         title: const Text ("App Gabaritando"),
@@ -84,7 +84,7 @@ class FirstPage extends StatefulWidget{
   State<FirstPage> createState() => _FirstPageState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _FirstPageState extends State<FirstPage>{
   List<Question> questions =[
     Question('1. O que é Flutter?:', ['a) Flutter é um framework de código aberto desenvolvido pelo Google para criar interfaces de usuário nativas de alta qualidade em plataformas móveis (iOS e Android) e web a partir de uma única base de código.', 'b) Flutter utiliza a linguagem java e Dotnet para escrever aplicativos, não ferecendo um ambiente de desenvolvimento rápido e eficiente.', 'c) É conhecido por sua performance lenta e por proporcionar uma experiência visual pouco atrativa através de seus widgets.'], null, 0),
     Question('2. Quais são as vantagens de usar Flutter?:', ['a)Desenvolvimento rápido de aplicativos para múltiplas plataformas a partir de um único código-fonte.', 'b) Widgets personalizáveis e de baixo desempenho que oferecem uma experiência para poucos programadores.', 'c) Pouca comunidade de desenvolvedores e sem suporte do Google.'], null, 0),
@@ -116,6 +116,7 @@ class _FirstPageState extends State<FirstPage> {
   }
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
