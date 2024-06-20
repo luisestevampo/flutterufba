@@ -1,56 +1,13 @@
-# appgabaritando
-
-A new Flutter project.
-
-
-
-
-
-
-
-
-
+# Nome do projeto
+App Gabaritando
 
 # Projeto
 
-## Informações básicas
+## Equipe
 
-Em equipe, desenvolva um aplicativo em Flutter que possa ser executado no Google Chrome.
+- Leonardo v. Tourinho
+- Luis Fernando dos Santos Estevam
 
-## Equipes
+## Descrição do projeto
 
-Luis Fernando dos Santos Estevam
-Leonardo v. Tourinho
-
-## Restrições
-
-O aplicativo deve:
-
-- possuir ao menos duas telas
-- ser interativo
-- usar persistência de dados (SQLite, SharedPreferences, etc.)
-
-## Entrega
-
-Enviar arquivo `.zip` do aplicativo para rodrigorgs@gmail.com. O aplicativo deve conter:
-
-- arquivo `README.md` contendo:
-  - descrição do projeto
-  - instruções para compilar e executar o projeto
-  - **lista de membros da equipe**
-- código-fonte do projeto
-- NÃO inclua as pastas `build`, `ios`, `android`, `windows`, `linux` e `macos`
-- pasta `screenshots` contendo **screenshots** de todas as telas do aplicativo, no formato PNG
-
-## Prazo
-
-- Quinta-feira, 20 de junho, 11:00
-
-## Avaliação
-
-A avaliação será feita com base nos seguintes critérios:
-
-- Funcionalidade e ausência de bugs
-- Qualidade da interface
-- Qualidade do código (avaliada com `flutter analyze`)
-- Aderência às orientações desta página
+Este aplicativo visa simular uma avaliação digital onde é possível responder a um questionário. O aplicativo consegue também mostrar se o aluno foi ou não aprovado a partir do cálculo da nota obtida baseaada nas respostas das questões.

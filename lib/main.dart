@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: ("App Gabaritando"),
-      home: const inicio(),
+      home: Inicio(),
     );
   }
 }
 
-class inicio extends StatelessWidget {
-  const inicio({super.key});
+class Inicio extends StatelessWidget {
+  const Inicio({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -207,12 +207,12 @@ class _FirstPageState extends State<FirstPage> {
           if (index == 0) {
             Navigator.pop(
               context,
-              MaterialPageRoute(builder: (context) => const inicio()),
+              MaterialPageRoute(builder: (context) => const Inicio()),
             );
           } else if (index == 1) {
             Navigator.pop(
               context,
-              MaterialPageRoute(builder: (context) => const inicio()),
+              MaterialPageRoute(builder: (context) => const Inicio()),
             );
           } else {
             calculateAndNavigate();
@@ -261,7 +261,7 @@ class TelaResultado extends StatelessWidget {
           } else if (index == 1) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const inicio()),
+              MaterialPageRoute(builder: (context) => const Inicio()),
             );
           }
         },
